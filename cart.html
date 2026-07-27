@@ -1,0 +1,128 @@
+<!doctype html><html lang=en><head><meta charset=utf-8><meta name=viewport content='width=device-width,initial-scale=1'><title>Your cart — anteprima</title></head><body class='template-cart'><section class="section"><div class="wrap narrow">
+  <h1 style="margin-bottom:1rem">Your cart</h1>
+  
+  <form action="" method="post" novalidate id="cartForm">
+    
+    <div class="cart-row">
+      <a class="cart-imgwrap"><img src="assets/g1-benefits-v2.jpg" class="cart-img"></a>
+      <div class="cart-info">
+        <a class="cart-title">Natural Batana Hair Oil</a>
+        <div class="cart-variant">Buy 1 Get 1 Free</div>
+        <div class="cart-sub">&#8635; Subscription — $39.99 every 30 days until cancelled. Cancel anytime at <a href="manage-subscription.html">Manage Subscription</a>.</div>
+        <div class="cart-unit">$29.99 each</div>
+        <button type="button" class="cart-remove">Remove</button>
+      </div>
+      <div class="cart-right">
+        <div class="cart-qty"><button class="qbtn">&minus;</button><input class="qinput" value="1"><button class="qbtn">+</button></div>
+        <div class="cart-line">$29.99</div>
+      </div>
+    </div>
+
+
+    <div class="cart-foot">
+      <button type="submit" name="update" class="cart-update">↻ Update cart</button>
+      <div class="cart-total"><span class="lead">Total</span> <b>$29.99</b></div>
+    </div>
+
+    <!-- ===== Layer 2 cross-sell: PRIMA del checkout, così viene visto ===== -->
+    <div class="xsell" id="xsell" hidden>
+      <div class="xsell-h">Complete your Edge Recovery System</div>
+      <div class="xsell-grid" id="xsellGrid"></div>
+    </div>
+
+    <button type="submit" name="checkout" class="btn btn-lg" style="width:100%;margin-top:6px">Proceed to checkout →</button>
+    <p class="buy-reassure" style="margin-top:14px"><svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><rect x="5" y="10.5" width="14" height="9.5" rx="2"/><path d="M8 10.5V7.5a4 4 0 0 1 8 0v3"/></svg> Secure checkout <span class="sep">·</span> <svg class="ic" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg> 30-day money-back guarantee</p>
+  </form>
+
+  <style>
+    /* ===== base + palette (mancava nel tema: il carrello era senza stile) ===== */
+    @import url('https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Inter:wght@400;500;600;700;800&display=swap');
+    :root{--cream:#faf7ec;--cream2:#f3efdf;--white:#fff;--brown:#0d3320;--brown-soft:#5c5c54;--line:#e5e0cf;--gold:#f3c44d}
+    body{margin:0;background:var(--cream);color:#1a1a1a;font-family:'Inter',-apple-system,"Helvetica Neue",Arial,sans-serif;line-height:1.55}
+    .section{padding:18px 0 44px}
+    .wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+    .wrap.narrow{max-width:720px}
+    h1{font-family:'Fraunces',Georgia,serif;font-weight:400;font-size:34px;color:var(--brown);margin:0 0 1rem}
+    .lead{color:var(--brown-soft)}
+    .btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--brown);color:#fff;border:none;padding:14px 26px;border-radius:10px;font-weight:700;letter-spacing:.02em;text-decoration:none;cursor:pointer;font-family:inherit;transition:.2s}
+    .btn:hover{background:#0b2a1a}
+    .btn-lg{padding:17px;font-size:16px}
+    .buy-reassure{display:flex;align-items:center;justify-content:center;gap:8px;font-size:.82rem;color:var(--brown-soft);flex-wrap:wrap}
+    .buy-reassure .ic{width:18px;height:18px}
+    .buy-reassure .sep{opacity:.5}
+    .xsell{margin-top:34px;padding-top:26px;border-top:1px solid var(--line)}
+    .xsell-h{font-family:'Fraunces',serif;font-size:1.4rem;color:var(--brown);margin-bottom:16px;text-align:center}
+    .xsell-grid{display:grid;gap:12px}
+    .xcard{display:flex;align-items:center;gap:14px;border:1px solid var(--line);border-radius:14px;padding:12px 14px;background:var(--white)}
+    .xcard img{width:60px;height:60px;object-fit:cover;border-radius:10px;flex-shrink:0;background:var(--cream)}
+    .xcard .xt{flex:1;min-width:0;line-height:1.3}
+    .xcard .xt b{display:block;font-size:.98rem;color:var(--brown);line-height:1.25}
+    .xcard .xt span{font-size:.82rem;color:var(--brown-soft);line-height:1.3}
+    .xcard .xp{text-align:right;flex-shrink:0}
+    .xcard .xp b{display:block;font-size:1rem;color:var(--brown)}
+    .xcard .xp s{font-size:.8rem;color:#a99}
+    .xadd{margin-top:6px;background:none;border:1px solid var(--brown);color:var(--brown);border-radius:999px;padding:7px 16px;font-size:.82rem;font-weight:600;cursor:pointer;font-family:inherit;transition:.15s;white-space:nowrap}
+    .xadd:hover{background:var(--brown);color:#fff}
+    .xadd:disabled{opacity:.6;cursor:default}
+    .cart-row{display:flex;gap:18px;align-items:center;padding:20px 0;border-bottom:1px solid var(--line)}
+    .cart-imgwrap{flex:0 0 auto}
+    .cart-img{width:92px;height:92px;object-fit:cover;border-radius:8px;display:block}
+    .cart-info{flex:1;min-width:0}
+    .cart-title{font-family:'Fraunces',serif;font-size:1.32rem;color:var(--brown);text-decoration:none;display:inline-block;line-height:1.2}
+    .cart-title:hover{text-decoration:underline}
+    .cart-variant{color:var(--brown-soft);font-size:.85rem;margin-top:2px}
+    .cart-unit{color:var(--brown-soft);font-size:.85rem;margin-top:4px}
+    /* riga abbonamento: i termini ricorrenti devono restare visibili fino al checkout (MID) */
+    .cart-sub{margin-top:6px;background:var(--cream2);border:1px solid var(--line);border-left:3px solid var(--brown);border-radius:8px;padding:8px 10px;font-size:.8rem;line-height:1.45;color:#3f3f3a}
+    .cart-sub a{color:var(--brown);text-decoration:underline}
+    .cart-remove{background:none;border:0;color:var(--brown-soft);font-size:.82rem;cursor:pointer;padding:6px 0 0;text-decoration:underline;font-family:inherit}
+    .cart-remove:hover{color:#b04a3a}
+    .cart-right{display:flex;flex-direction:column;align-items:flex-end;gap:10px;flex:0 0 auto}
+    .cart-qty{display:inline-flex;align-items:center;border:1px solid var(--line);border-radius:999px;background:var(--white);overflow:hidden}
+    .cart-qty .qbtn{width:36px;height:38px;border:0;background:none;font-size:1.15rem;color:var(--brown);cursor:pointer;line-height:1;display:flex;align-items:center;justify-content:center;font-family:inherit;transition:background .12s}
+    .cart-qty .qbtn:hover{background:var(--cream)}
+    .cart-qty .qinput{width:42px;height:38px;border:0;border-left:1px solid var(--line);border-right:1px solid var(--line);text-align:center;font-size:1rem;color:var(--brown);background:none;font-family:inherit;-moz-appearance:textfield}
+    .cart-qty .qinput::-webkit-outer-spin-button,.cart-qty .qinput::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+    .cart-line{font-weight:600;font-size:1.05rem;color:var(--brown);white-space:nowrap}
+    .cart-foot{display:flex;justify-content:space-between;align-items:center;margin:22px 0 4px;flex-wrap:wrap;gap:14px}
+    .cart-update{background:none;border:1px solid var(--line);border-radius:999px;padding:10px 18px;color:var(--brown);cursor:pointer;font-family:inherit;font-size:.9rem;transition:background .12s}
+    .cart-update:hover{background:var(--cream)}
+    .cart-total{display:flex;align-items:baseline;gap:12px}
+    .cart-total b{font-size:1.6rem;font-family:'Fraunces',serif;color:var(--brown)}
+    .cart-busy{opacity:.5;pointer-events:none}
+    @media(max-width:560px){
+      .cart-row{flex-wrap:wrap;gap:12px}
+      .cart-img{width:72px;height:72px}
+      .cart-right{flex-direction:row;width:100%;justify-content:space-between;align-items:center}
+      /* cross-sell mobile: card a due righe, testo su tutta la larghezza */
+      .xcard{flex-wrap:wrap;gap:10px 12px;padding:12px}
+      .xcard img{width:48px;height:48px}
+      .xcard .xt{flex:1 1 auto;order:1}
+      .xcard .xt b{font-size:.92rem}
+      .xcard .xp{order:2;display:flex;align-items:center;gap:10px;flex:0 0 auto}
+      .xcard .xp b,.xcard .xp s{display:inline}
+      .xadd{margin-top:0}
+    }
+  </style>
+  
+  
+</div></section>
+
+<script>
+/* anteprima: mostra il cross-sell con dati di esempio (sullo store i prezzi sono reali) */
+var XS=[
+ {n:'Rosemary & Peppermint Scalp Serum',d:'Step 2 — energizes the scalp',p:'$22.00',s:'$32.00',img:'assets/up-serum.png'},
+ {n:'Cleanse & Repair Duo',d:'Shampoo + deep mask',p:'$39.00',s:'$58.00',img:'assets/up-shampoomask.png'},
+ {n:'30-Day Edge Recovery Challenge',d:'Video routine + workbook',p:'$14.00',s:'$49.00',img:'assets/up-course.png'}
+];
+var box=document.getElementById('xsell'),grid=document.getElementById('xsellGrid');
+box.hidden=false;
+XS.forEach(function(x){var el=document.createElement('div');el.className='xcard';
+ el.innerHTML='<img src="'+x.img+'" alt=""><span class="xt"><b>'+x.n+'</b><span>'+x.d+'</span></span>'+
+ '<span class="xp"><b>'+x.p+'</b><s>'+x.s+'</s><button type="button" class="xadd">+ Add</button></span>';
+ el.querySelector('.xadd').onclick=function(){alert('Anteprima: l\'aggiunta al carrello funziona solo sullo store Shopify.');};
+ grid.appendChild(el);});
+document.querySelectorAll('.cart-remove,.qbtn,.cart-update').forEach(function(b){b.onclick=function(e){e.preventDefault();};});
+var co=document.querySelector('[name=checkout]');if(co)co.onclick=function(e){e.preventDefault();alert('Anteprima: il checkout funziona solo sullo store Shopify.');};
+</script>
+</body></html>
