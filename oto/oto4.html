@@ -8,7 +8,13 @@
 </head>
 <body style="margin:0;background:#faf7ec">
 <style>
-  #avera-oto .cta:hover{background:#164a2e}
+  @keyframes averaPulse{0%,100%{transform:scale(1);opacity:1}50%{transform:scale(1.5);opacity:.35}}
+  @keyframes averaShake{0%,88%,100%{transform:rotate(0)}91%{transform:rotate(-9deg)}94%{transform:rotate(9deg)}97%{transform:rotate(-5deg)}}
+  @keyframes averaGlow{0%,100%{box-shadow:0 0 0 0 rgba(214,40,40,.45)}50%{box-shadow:0 0 0 11px rgba(214,40,40,0)}}
+  #avera-oto .dot{display:inline-block;width:9px;height:9px;border-radius:50%;background:#d62828;animation:averaPulse 1.15s ease-in-out infinite;margin-right:9px;vertical-align:middle}
+  #avera-oto .bell{display:inline-block;animation:averaShake 3.2s ease-in-out infinite;transform-origin:50% 10%}
+  #avera-oto .cta{animation:averaGlow 2.4s ease-in-out infinite}
+  #avera-oto .cta:hover{background:#164a2e;animation:none}
   #avera-oto .stack-row:last-child{border-bottom:none}
   @media (max-width:640px){
     #avera-oto h1{font-size:25px !important}
@@ -20,9 +26,12 @@
 </style>
 <div id="avera-oto" style="max-width:660px;margin:0 auto;padding:0;font-family:apple-system,BlinkMacSystemFont,'Segoe UI',Roboto,Helvetica,Arial,sans-serif;color:#1a1a1a;line-height:1.6;text-align:center;background:#faf7ec">
 
-  <div style="background:#0d3320;color:#fff;padding:15px 18px">
-    <div style="font-size:17px;font-weight:800;margin-bottom:5px">WAIT &mdash; your order is confirmed. Do not close this page.</div>
-    <div style="font-size:13px;opacity:.92">This is <b>not</b> a second charge and not a new checkout. Your card is already on file: one click adds this to the order you just placed.</div>
+  <div style="background:#d62828;color:#fff;padding:13px 18px;text-align:center">
+    <div style="font-size:20px;font-weight:900;letter-spacing:.03em;line-height:1.15;text-transform:uppercase"><span class="dot"></span><span class="bell">&#9888;</span> Wait &mdash; do not close this page</div>
+  </div>
+  <div style="background:#0d3320;color:#fff;padding:14px 18px;text-align:center">
+    <div style="font-size:15px;font-weight:800;margin-bottom:4px">&#10003; Your order is confirmed and paid</div>
+    <div style="font-size:13px;opacity:.9;max-width:520px;margin:0 auto">What follows is <b>not</b> a second charge and not a new checkout. Your card is already on file &mdash; one click adds this to the order you just placed.</div>
   </div>
 
   <div style="background:#f3efdf;padding:9px 18px;font-size:12px;font-weight:700;color:#0d3320;letter-spacing:.05em;text-transform:uppercase">Step 4 of 4 &middot; almost done</div>
@@ -46,7 +55,8 @@
       <div style="display:flex;justify-content:space-between;padding:11px 0 0;margin-top:6px;border-top:1px solid #e5e0cf;font-size:15px;color:#6f6f6f"><span>Total value</span><span style="text-decoration:line-through">$34.96</span></div>
       <div style="padding-top:14px">
         <span style="display:inline-block;padding:4px 11px;border-radius:999px;background:#0d3320;color:#fff;font-size:12px;font-weight:800;letter-spacing:.03em;margin-bottom:8px">All three together</span>
-        <div><span style="font-size:42px;font-weight:800;color:#0d3320;line-height:1">$19.99</span></div>
+        <div><span style="font-size:46px;font-weight:900;color:#0d3320;line-height:1">$19.99</span></div>
+        <div style="display:inline-block;margin-top:10px;padding:7px 15px;border-radius:8px;background:#d62828;color:#fff;font-size:15px;font-weight:900;letter-spacing:.02em">YOU SAVE $14.97 &middot; 43% OFF</div>
       </div>
     </div>
 
