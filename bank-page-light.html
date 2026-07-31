@@ -1,0 +1,604 @@
+<!DOCTYPE html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>AVERA — Natural Batana Hair Oil</title></head><body>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&amp;family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet">
+<style>
+:root{
+  --cream:#faf7ec; --cream2:#f3efdf; --green:#0d3320; --green2:#0b2a1a;
+  --ink:#1a1a1a; --muted:#5c5c54; --gold:#f3c44d; --gold-d:#e0ad2e;
+  --line:#e5e0cf; --serif:"Fraunces","GT Super","Georgia",serif; --sans:"Inter",-apple-system,"Helvetica Neue",Arial,sans-serif;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.55;font-size:16px;overflow-x:hidden}
+.bicon{display:inline-flex;width:22px;height:22px;color:var(--green)}
+.bicon svg{width:22px;height:22px}
+img{max-width:100%;display:block}
+a{color:inherit;text-decoration:none}
+h1,h2,h3{font-family:var(--serif);font-weight:400;line-height:1.15}
+.wrap{max-width:1200px;margin:0 auto;padding:0 20px}
+.center{text-align:center}
+
+/* announce + header */
+.announce{background:var(--green);color:#fff;text-align:center;font-size:13px;letter-spacing:.08em;padding:10px;font-weight:600}
+header{background:var(--cream);border-bottom:1px solid var(--line);position:sticky;top:0;z-index:60}
+.hrow{display:flex;align-items:center;justify-content:space-between;height:70px}
+.logo{font-family:var(--serif);font-size:30px;letter-spacing:.18em;display:block}
+.logo img{height:30px;width:auto;display:block}
+.nav{display:flex;gap:26px;font-size:13.5px;letter-spacing:.02em}
+.nav a:hover{opacity:.6}
+.hicons{display:flex;gap:18px;font-size:18px}
+
+/* hero */
+.hero{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1fr);gap:48px;padding:34px 0 50px}
+.hero>div{min-width:0}
+.gallery .main{border-radius:16px;overflow:hidden;background:var(--cream2);position:relative}
+.gallery .mslides{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;-ms-overflow-style:none;scrollbar-width:none}
+.gallery .mslides::-webkit-scrollbar{display:none}
+.gallery .mslides img{flex:0 0 100%;width:100%;aspect-ratio:1/1;object-fit:cover;scroll-snap-align:start;scroll-snap-stop:always}
+.mdots{position:absolute;bottom:10px;left:0;right:0;display:flex;gap:6px;justify-content:center;z-index:2}
+.mdots span{width:7px;height:7px;border-radius:50%;background:rgba(255,255,255,.55);transition:.2s}
+.mdots span.on{background:#fff;transform:scale(1.25)}
+.thumbwrap{display:flex;align-items:center;gap:8px;margin-top:12px}
+.tnav{flex-shrink:0;width:30px;height:30px;border-radius:50%;border:none;background:var(--green);color:#fff;font-size:16px;line-height:1;cursor:pointer;display:grid;place-items:center}
+.thumbs{display:flex;gap:8px;overflow-x:auto;scroll-behavior:smooth;-ms-overflow-style:none;scrollbar-width:none;flex:1;min-width:0}
+.thumbs::-webkit-scrollbar{display:none}
+.thumbs img{flex:0 0 auto;width:74px;height:74px;border-radius:10px;cursor:pointer;object-fit:cover;border:2px solid var(--line);transition:.2s}
+.thumbs img.on,.thumbs img:hover{border-color:var(--green)}
+
+.pill{display:flex;align-items:center;gap:9px;width:100%;background:var(--green);color:#fff;font-size:12.5px;font-weight:700;letter-spacing:.04em;padding:11px 16px;border-radius:9px;text-transform:uppercase;margin-bottom:16px}
+.pill i{flex-shrink:0;width:17px;height:17px;border-radius:50%;background:#fff;color:var(--green);display:grid;place-items:center;font-size:11px;font-style:normal;font-weight:900}
+.stars{color:#e2a300;letter-spacing:2px;font-size:15px}
+.rev{display:flex;align-items:center;gap:10px;font-size:13px;color:var(--muted);margin:14px 0 10px}
+.ptitle{font-size:40px;margin-bottom:14px}
+.pdesc{color:#3f3f3a;font-size:15.5px;margin-bottom:22px}
+.benefits{display:grid;grid-template-columns:1fr 1fr;gap:12px 26px;margin-bottom:22px}
+.ben{display:flex;align-items:center;gap:10px;font-size:13.5px;font-weight:600;text-transform:uppercase;letter-spacing:.02em}
+.ben svg{flex-shrink:0}
+.ship{background:var(--cream2);border-radius:10px;padding:11px 16px;font-size:13.5px;margin-bottom:14px;display:flex;align-items:center;justify-content:center;gap:8px;text-align:center}
+.ship b{color:var(--green)}
+.ship b{color:var(--green)}
+.buy{display:block;width:100%;background:var(--gold);color:var(--green2);border:none;padding:18px;border-radius:10px;font-size:16px;font-weight:800;letter-spacing:.12em;cursor:pointer;text-transform:uppercase;transition:.2s}
+.buy:hover{background:var(--gold-d)}
+.pays{display:flex;justify-content:center;margin:18px 0 8px}
+.pays img{width:100%;max-width:330px;height:auto;display:block}
+
+/* bundle offers */
+.offers{border:1.5px solid var(--ink);border-radius:14px;overflow:hidden;margin-bottom:14px}
+.offer{display:flex;align-items:center;gap:16px;padding:22px 18px;border-bottom:1.5px solid var(--ink);cursor:pointer;position:relative;background:transparent;transition:.15s}
+.offer:last-child{border-bottom:none}
+.offer .radio{width:24px;height:24px;border:2px solid #bbb;border-radius:50%;flex-shrink:0;display:grid;place-items:center;transition:.15s}
+.offer.on .radio{border-color:var(--ink)}
+.offer.on .radio::after{content:"";width:12px;height:12px;background:var(--ink);border-radius:50%}
+.offer .name{font-size:21px;font-weight:800;flex:1;letter-spacing:-.01em}
+.offer .price{text-align:right;line-height:1.2}
+.offer .price b{font-size:23px;font-weight:800;display:block}
+.offer .price s{color:#8a8a8a;font-size:15px}
+.offer .pop{position:absolute;top:0;left:50%;transform:translate(-50%,-50%);background:var(--green);color:#fff;font-size:12px;font-weight:700;padding:6px 15px;border-radius:7px;white-space:nowrap}
+.refill{border:1.5px solid var(--ink);border-radius:12px;padding:16px 18px;display:flex;align-items:flex-start;gap:14px;margin-bottom:14px;cursor:pointer}
+.refill .cb{width:26px;height:26px;border:2px solid var(--ink);border-radius:6px;display:grid;place-items:center;flex-shrink:0;font-weight:800;font-size:16px}
+.refill .cb.off{color:transparent}
+.refill .rt b{font-weight:800;display:block;font-size:16px}
+.refill .rt span{color:var(--muted);font-size:14px}
+
+/* ===== add-ons "Complete your routine" (order bumps) ===== */
+.addons{margin-bottom:14px}
+.addons-h{font-size:11.5px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;color:var(--green);margin-bottom:10px;display:flex;align-items:center;gap:8px}
+.addons-h::before,.addons-h::after{content:"";flex:1;height:1px;background:var(--line)}
+.addon{display:flex;align-items:center;gap:13px;border:1.5px solid var(--line);border-radius:12px;padding:11px 13px;margin-bottom:9px;cursor:pointer;transition:.15s;background:#fff}
+.addon:hover{border-color:var(--green)}
+.addon.on{border-color:var(--green);background:var(--cream)}
+.addon .cb{width:24px;height:24px;border:2px solid #cbcabb;border-radius:6px;flex-shrink:0;display:grid;place-items:center;color:#fff;font-size:14px;font-weight:900;transition:.15s}
+.addon.on .cb{background:var(--green);border-color:var(--green)}
+.addon .cb i{opacity:0;font-style:normal}
+.addon.on .cb i{opacity:1}
+.addon .th{width:52px;height:52px;border-radius:8px;object-fit:cover;flex-shrink:0;background:var(--cream2)}
+.addon .ad-t{flex:1;min-width:0;line-height:1.25}
+.addon .ad-t b{display:block;font-size:14px;font-weight:700;line-height:1.25}
+.addon .ad-t span{font-size:12px;color:var(--muted);line-height:1.25;display:block;margin-top:2px}
+.addon .ad-p{text-align:right;flex-shrink:0}
+.addon .ad-p b{display:block;font-size:15px;font-weight:800}
+.addon .ad-p s{font-size:12px;color:#9a9a90}
+
+/* abbonamento (ricarica automatica ogni 30 giorni) — divulgazione completa per l'underwriting MID */
+.subbox{border:2px solid var(--green);border-radius:14px;background:#fff;margin-bottom:14px;overflow:hidden}
+.subbox.on{background:var(--cream)}
+.sub-head{display:flex;align-items:flex-start;gap:13px;padding:14px;cursor:pointer}
+.sub-cb{width:26px;height:26px;border:2px solid #b9b8a8;border-radius:7px;flex-shrink:0;display:grid;place-items:center;background:#fff;color:#fff;font-size:15px;font-weight:900;transition:.15s;margin-top:1px}
+.subbox.on .sub-cb{background:var(--green);border-color:var(--green)}
+.sub-cb i{opacity:0;font-style:normal}
+.subbox.on .sub-cb i{opacity:1}
+.sub-main{flex:1;min-width:0}
+.sub-title{display:flex;align-items:center;gap:9px;flex-wrap:wrap;font-size:15.5px;font-weight:800;line-height:1.25}
+.sub-save{background:var(--gold);color:var(--green2);font-size:11px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:4px 9px;border-radius:6px}
+.sub-price{display:flex;align-items:baseline;gap:8px;margin-top:6px;font-size:15px;font-weight:800}
+.sub-price s{font-size:13px;font-weight:600;color:#9a9a90}
+.sub-price em{font-style:normal;font-size:13px;font-weight:600;color:var(--muted)}
+.sub-sched{margin-top:8px;font-size:13.5px;color:#3f3f3a;line-height:1.5}
+.sub-sched b{color:var(--green)}
+.sub-terms{border-top:1px dashed var(--line);padding:12px 14px 13px;font-size:12.5px;color:var(--muted);line-height:1.5}
+.sub-terms ul{margin:0;padding-left:17px}
+.sub-terms li{margin-bottom:4px}
+.sub-terms a{text-decoration:underline}
+.sub-legal{margin-top:9px;font-size:11.5px;line-height:1.5;color:#6b6b62}
+.sub-consent{border:1px solid var(--line);background:var(--cream2);border-radius:10px;padding:11px 13px;font-size:12.5px;line-height:1.5;color:#3f3f3a;margin-bottom:12px}
+.sub-consent b{color:var(--green)}
+@media(max-width:860px){
+  .sub-title{font-size:14.5px}
+  .sub-head{padding:12px;gap:11px}
+  .sub-cb{width:24px;height:24px}
+  .sub-terms{font-size:12px}
+}
+details.acc{border-top:1px solid var(--line)}
+details.acc summary{list-style:none;cursor:pointer;padding:16px 2px;font-weight:700;font-size:13.5px;letter-spacing:.05em;text-transform:uppercase;display:flex;justify-content:space-between;align-items:center}
+details.acc summary::-webkit-details-marker{display:none}
+details.acc summary::after{content:"+";font-size:20px;font-weight:400}
+details.acc[open] summary::after{content:"–"}
+details.acc .body{padding:0 2px 18px;font-size:14.5px;color:#444}
+details.acc .body p{margin-bottom:10px}
+details.acc .body b{color:var(--green)}
+
+/* doctor */
+.doc{background:var(--cream2);border-radius:14px;padding:26px;display:flex;gap:18px;align-items:flex-start;margin:8px 0 10px}
+.doc img{width:58px;height:58px;border-radius:50%;object-fit:cover;flex-shrink:0}
+.doc p{font-size:14.5px;color:#3f3f3a;margin-bottom:10px}
+.doc .who{font-weight:700;font-size:14px}
+.doc .role{color:var(--green);font-size:12.5px;display:flex;align-items:center;gap:6px}
+
+/* section */
+.sec{padding:64px 0}
+.sec.g{background:var(--green);color:#fff}
+.sec.c2{background:var(--cream2)}
+.sec h2{font-size:44px;text-align:center;margin-bottom:14px}
+.sec .sub{text-align:center;color:var(--muted);max-width:620px;margin:0 auto 40px;font-size:16px}
+.sec.g .sub{color:#cfe0d5}
+
+.cols4{display:grid;grid-template-columns:repeat(4,1fr);gap:30px;max-width:1000px;margin:0 auto}
+.col4{text-align:center}
+.col4 .ic{width:74px;height:74px;border-radius:50%;background:var(--cream2);display:grid;place-items:center;margin:0 auto 16px}
+.col4 .qic{width:76px;margin:0 auto 16px;display:flex;justify-content:center}
+.col4 .qic svg{width:76px;height:76px}
+.sec.g .col4 .ic{background:rgba(255,255,255,.08)}
+.col4 h3{font-size:20px;margin-bottom:8px}
+.col4 p{font-size:14px;color:var(--muted)}
+.sec.g .col4 p{color:#bcd0c2}
+.cta-c{text-align:center;margin-top:40px}
+.buy.inline{max-width:420px;margin:0 auto}
+.guar{font-size:12.5px;letter-spacing:.05em;margin-top:14px;text-transform:uppercase;color:var(--muted);display:flex;gap:8px;justify-content:center;align-items:center}
+
+/* one oil section */
+.collage{display:flex;gap:3px;height:560px}
+.collage .col-l{flex:1;min-width:0}
+.collage .col-r{flex:1;min-width:0;display:flex;flex-direction:column;gap:3px}
+.collage .col-l img{width:100%;height:100%;object-fit:cover;display:block}
+.collage .col-r img{width:100%;height:50%;object-fit:cover;display:block}
+.oneoil h2{text-align:left}
+.oneoil .sub{text-align:left;margin-left:0;margin-right:0;max-width:660px}
+.oneoil-acc details{border-bottom:1.5px solid var(--green)}
+.oneoil-acc details:first-child{border-top:1.5px solid var(--green)}
+.oneoil-acc summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:16px;padding:22px 0;font-weight:800;text-transform:uppercase;font-size:16px;letter-spacing:.02em;color:var(--green)}
+.oneoil-acc summary::-webkit-details-marker{display:none}
+.oneoil-acc summary::after{content:"+";flex-shrink:0;width:32px;height:32px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-size:20px;font-weight:400}
+.oneoil-acc details[open] summary::after{content:"−"}
+.oneoil-acc .cbody{padding:2px 0 20px}
+.oneoil-acc .cbody li{list-style:none;font-size:14.5px;color:#444;padding-left:22px;position:relative;margin-bottom:10px}
+.oneoil-acc .cbody li::before{content:"✓";position:absolute;left:0;color:var(--gold-d);font-weight:800}
+.trybtn{display:block;width:100%;max-width:560px;margin:38px auto 16px;background:var(--gold);border:1.5px solid var(--ink);color:var(--green2);text-align:center;padding:20px;font-weight:800;font-size:18px;border-radius:4px;cursor:pointer;transition:.2s}
+.trybtn:hover{background:var(--gold-d)}
+.statsband{position:relative;padding:46px 0;color:#fff;text-align:center;background:#b8891f;overflow:hidden}
+.statsband::before{content:"";position:absolute;inset:0;background:url(https://camillithomas7-prog.github.io/azure-en-page/assets/sec-27.webp) center/cover}
+.statsband .wrap{position:relative}
+.statsband .stats{gap:0;display:flex;justify-content:center;align-items:center;flex-wrap:nowrap;max-width:760px;margin:0 auto}
+.statsband .stat{flex:1;padding:0 12px;border-right:1px solid rgba(255,255,255,.45)}
+.statsband .stat:last-child{border-right:none}
+.statsband .stat b{color:#fff;font-size:38px;font-family:var(--serif);white-space:nowrap;line-height:1.1}
+.statsband .stat span{color:#fff;font-family:var(--serif);text-transform:none;letter-spacing:0;font-size:15px;display:block;margin-top:4px}
+
+/* stats */
+.stats{display:flex;justify-content:center;gap:60px;flex-wrap:wrap}
+.stat{text-align:center}
+.stat b{font-family:var(--serif);font-size:48px;color:var(--green);display:block}
+.stat span{font-size:13px;letter-spacing:.1em;text-transform:uppercase;color:var(--muted)}
+
+/* before after tabs */
+.batabs{display:flex;flex-wrap:wrap;gap:12px;justify-content:center;margin-bottom:36px;max-width:640px;margin-left:auto;margin-right:auto}
+.batab{border:1.5px solid var(--green);border-radius:999px;padding:12px 22px;font-size:13.5px;font-weight:700;letter-spacing:.03em;text-transform:uppercase;cursor:pointer;background:var(--green);color:#fff;transition:.15s}
+.batab.on{background:#fff;color:var(--green)}
+.bapair2{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:780px;margin:0 auto}
+.baimg{border-radius:12px;overflow:hidden;background:var(--cream2)}
+.baimg img{width:100%;aspect-ratio:3/3.6;object-fit:cover;display:block}
+.baimg .cap{text-align:center;padding:14px;font-size:17px;font-weight:500}
+.baimg.before .cap{background:var(--cream2);color:var(--ink)}
+.baimg.after .cap{background:var(--green);color:#fff}
+.bameta{max-width:780px;margin:22px auto 0;display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap}
+.bameta .bstars{color:#2e7d32;font-size:24px;letter-spacing:4px}
+.baprob{background:var(--green);color:#fff;border-radius:999px;padding:15px 28px;font-size:15px;font-weight:600}
+.baprob b{font-weight:800}
+.bareview{max-width:780px;margin:18px auto 0;text-align:left}
+.bareview .q{font-size:16px;color:#333;margin-bottom:6px}
+.bareview .n{font-weight:700;font-size:14px;color:var(--muted)}
+
+/* most oils just coat (light bg) */
+.coatsec{background:var(--cream);color:var(--ink);padding-bottom:60px}
+.ticker{background:var(--green);color:var(--gold);font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;padding:13px 0;overflow:hidden}
+.ticker-track{display:flex;width:max-content;animation:ticker-scroll 30s linear infinite}
+.ticker-item{flex:none;white-space:nowrap}
+@keyframes ticker-scroll{from{transform:translateX(0)}to{transform:translateX(-50%)}}
+@media(prefers-reduced-motion:reduce){.ticker-track{animation:none}}
+.ticker b{background:var(--gold);color:var(--green2);padding:3px 10px;border-radius:5px;margin:0 4px}
+.mostpill{display:inline-block;background:var(--gold);color:var(--green2);font-family:var(--serif);font-size:20px;padding:10px 26px;border-radius:9px;margin:44px 0 22px}
+.coathead{text-align:center;font-size:48px;color:var(--green);margin-bottom:44px;line-height:1.1}
+.coathead em{font-style:italic}
+.coatgrid{display:grid;grid-template-columns:1fr 1fr;gap:44px;max-width:900px;margin:0 auto}
+.coatcol{text-align:center}
+.coatcol .strand{max-height:320px;width:auto;margin:0 auto 16px}
+.cotag{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:#fff;font-size:11px;font-weight:700;letter-spacing:.05em;text-transform:uppercase;padding:9px 15px;border-radius:7px}
+.cobox{border:1px dashed #c9c2ab;border-radius:9px;padding:14px 16px;margin-top:10px;font-size:14px;color:#444;display:flex;gap:10px;align-items:flex-start;text-align:left}
+.cobox .mk{flex-shrink:0;width:22px;height:22px;border-radius:50%;display:grid;place-items:center;font-size:12px;font-weight:800;color:#fff}
+.cobox .mk.x{background:#1a1a1a}.cobox .mk.v{background:#2e7d32}
+.copills{display:flex;gap:8px;justify-content:center;margin:22px 0 18px;flex-wrap:wrap}
+.copills span{background:var(--gold);color:var(--green2);font-size:12px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:9px 15px;border-radius:7px}
+.coatcol h3{font-size:28px;color:var(--green);margin:8px 0 10px}
+.coatcol p{color:#555;font-size:15px;max-width:380px;margin:0 auto}
+
+/* source numbered accordion */
+.srcjar{width:100%;max-width:360px;margin:0 auto 6px}
+.numacc{max-width:640px;margin:36px auto 0}
+.numacc details{border:1.5px solid var(--green);border-radius:14px;margin-bottom:16px;background:var(--cream2);overflow:hidden}
+.numacc summary{list-style:none;cursor:pointer;display:flex;align-items:center;gap:16px;padding:22px 22px;font-family:var(--serif);font-size:22px;color:var(--green)}
+.numacc summary::-webkit-details-marker{display:none}
+.numacc summary .no{width:34px;height:34px;border-radius:50%;background:var(--green);color:#fff;display:grid;place-items:center;font-family:var(--sans);font-weight:700;font-size:15px;flex-shrink:0}
+.numacc summary .ttl{flex:1}
+.numacc summary::after{content:"⌄";font-size:22px;color:var(--green);margin-top:-8px}
+.numacc details[open] summary::after{content:"⌃";margin-top:4px}
+.numacc .nbody{padding:0 22px 22px 72px;color:#444;font-size:14.5px}
+.numacc .nbody b{color:var(--green);display:block;font-size:16px;margin-bottom:4px}
+
+/* backed by testing */
+.testing h2 em{font-style:italic}
+.trow{display:grid;grid-template-columns:1fr 1.15fr;gap:20px;align-items:end;border-top:1px solid var(--line);padding:32px 0}
+.trow:last-of-type{border-bottom:1px solid var(--line)}
+.trow .tleft{align-self:end}
+.trow .pct{font-family:var(--serif);font-size:56px;color:var(--green);line-height:1}
+.trow .tright{display:flex;flex-direction:column;gap:14px}
+.trow .desc{font-size:14.5px;color:#333}
+.trow .desc b{font-weight:800}
+.jarcard{background:repeating-linear-gradient(-45deg,#e7ddc0,#e7ddc0 5px,#f0e9d5 5px,#f0e9d5 10px);border-radius:8px;padding:12px;display:flex;justify-content:center;align-items:flex-end}
+.jarcard img{height:100px;width:auto}
+.trialnote{text-align:center;font-size:12.5px;color:var(--muted);margin-top:24px}
+
+/* comparison image */
+.compare img{width:100%;max-width:760px;margin:0 auto;border-radius:16px}
+
+/* faq */
+.faq{max-width:820px;margin:0 auto}
+.faq details{background:#fff;border:1px solid var(--line);border-radius:12px;margin-bottom:12px;padding:0 20px}
+.faq summary{list-style:none;cursor:pointer;padding:18px 0;font-weight:700;font-size:16px;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-size:22px}
+.faq details[open] summary::after{content:"–"}
+.faq .a{padding:0 0 18px;color:#444;font-size:14.5px}
+
+/* footer */
+footer{background:var(--green);color:#cfe0d5;padding:56px 0 30px;font-size:14px}
+.fgrid{display:grid;grid-template-columns:2fr 1fr 1.4fr;gap:40px;padding-bottom:34px;border-bottom:1px solid rgba(255,255,255,.15)}
+footer .logo{color:#fff;margin-bottom:14px}
+footer .logo img{height:26px}
+footer h5{color:#fff;font-size:12px;letter-spacing:.15em;text-transform:uppercase;margin-bottom:16px}
+footer li{list-style:none;margin-bottom:10px}
+.fmail input{padding:12px 14px;border-radius:8px;border:none;width:100%;margin:10px 0;font-size:14px}
+.fmail button{background:var(--gold);color:var(--green2);border:none;padding:12px 20px;border-radius:8px;font-weight:700;cursor:pointer}
+.fbot{padding-top:24px;font-size:12.5px;text-align:center}
+
+@media(max-width:900px){
+  .collage{height:440px}
+  .statsband .stat{padding:0 8px}
+  .statsband .stat b{font-size:26px}
+  .statsband .stat span{font-size:12.5px}
+  .oneoil h2{font-size:30px}
+  .hero{grid-template-columns:minmax(0,1fr);gap:24px}
+  .nav,.hicons{display:none}
+  .sec h2{font-size:32px}.ptitle{font-size:30px}
+  .cols4{grid-template-columns:1fr 1fr;gap:24px}
+  .concerns{grid-template-columns:1fr 1fr}
+  .ba{grid-template-columns:1fr 1fr}
+  .source{grid-template-columns:1fr 1fr}
+  .fgrid{grid-template-columns:1fr;gap:28px}
+  .coat{grid-template-columns:1fr}
+  .coatgrid{grid-template-columns:1fr;gap:50px}
+  .coathead{font-size:34px}
+  .trow .desc{max-width:100%}
+  .trow .pct{font-size:44px}
+  .numacc summary{font-size:19px;padding:18px}
+  .numacc .nbody{padding-left:60px}
+  .stats{gap:34px}
+}
+@media(max-width:560px){
+  /* add-on Livello 1: compattati per mobile */
+  .addon{gap:10px;padding:10px 11px}
+  .addon .th{width:44px;height:44px}
+  .addon .ad-t b{font-size:13px}
+  .addon .ad-t span{font-size:11px}
+  .addon .cb{width:22px;height:22px}
+  .addon .ad-p b{font-size:14px}
+  .addons-h{font-size:10.5px}
+
+  .trow{grid-template-columns:1fr;gap:14px;align-items:start;padding:26px 0}
+  .trow .tleft{align-self:start}
+  .trow .pct{font-size:40px}
+  .trow .tright{gap:12px}
+  .jarcard{padding:10px}
+  .jarcard img{height:84px}
+
+  .concerns,.ba,.source,.cols4{grid-template-columns:1fr}
+  .statsband .stat b{font-size:22px}
+  .statsband .stat span{font-size:11px}
+  .statsband .stat{padding:0 6px}
+  .benefits{gap:12px 14px}
+  .ben{font-size:11.5px}
+  #women{grid-template-columns:repeat(3,1fr) !important}
+  .stats{gap:22px}
+  .stat b{font-size:34px}
+  .trust-badges{gap:14px}
+  .doc{padding:20px}
+  .sec{padding:44px 0}
+  .sec h2{font-size:27px}
+  .pays img{max-width:290px}
+}
+.bapanel{display:none}.bapanel.on{display:block}
+</style>
+
+
+
+<div class="announce">✨ UP TO 65% OFF + FREE GIFTS</div>
+
+<header>
+  <div class="wrap hrow">
+    <a href="https://camillithomas7-prog.github.io/azure-en-page/index.html" class="logo"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-logo.png" alt="AVERA"></a>
+    <nav class="nav">
+      <a href="#">Shop</a><a href="#">Growth Bundle</a><a href="#">Take the Quiz</a>
+      <a href="#">Our Story</a><a href="https://camillithomas7-prog.github.io/azure-en-page/manage-subscription.html">Manage Subscription</a><a href="#">Ambassador</a><a href="#">Contact</a>
+    </nav>
+    <div class="hicons"><span>⌕</span><span>🛍</span></div>
+  </div>
+</header>
+
+<!-- HERO -->
+<div class="wrap">
+  <section class="hero">
+    <div class="gallery">
+      <div class="main">
+        <div class="mslides" id="mslides"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g1-benefits-v2.jpg" alt="Natural Batana Hair Oil — photo 1"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g2-essence.jpg" alt="Natural Batana Hair Oil — photo 2" loading="lazy"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g3-results-v2.jpg" alt="Natural Batana Hair Oil — photo 3" loading="lazy"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g4-loved.jpg" alt="Natural Batana Hair Oil — photo 4" loading="lazy"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g5-revitalize.jpg" alt="Natural Batana Hair Oil — photo 5" loading="lazy"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g6-steps.jpg" alt="Natural Batana Hair Oil — photo 6" loading="lazy"></div>
+        <div class="mdots" id="mdots"><span class="on"></span><span></span><span></span><span></span><span></span><span></span></div>
+      </div>
+      <div class="thumbwrap">
+        <button class="tnav" onclick="document.getElementById('thumbs').scrollBy({left:-170,behavior:'smooth'})">‹</button>
+        <div class="thumbs" id="thumbs"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g1-benefits-v2.jpg" class="on" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g2-essence.jpg" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g3-results-v2.jpg" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g4-loved.jpg" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g5-revitalize.jpg" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/g6-steps.jpg" onclick="var w=this.parentNode,m=document.getElementById('mslides'),d=document.getElementById('mdots'),i=[].indexOf.call(w.children,this);m.scrollTo({left:i*m.clientWidth,behavior:'smooth'});[].forEach.call(w.children,function(c,k){c.classList.toggle('on',k===i);if(d.children[k])d.children[k].classList.toggle('on',k===i)});"></div>
+        <button class="tnav" onclick="document.getElementById('thumbs').scrollBy({left:170,behavior:'smooth'})">›</button>
+      </div>
+    </div>
+    <div class="info">
+      <span class="pill"><i>✓</i> Accelerated Growth for Edges &amp; Alopecia</span>
+      <div class="rev"><span class="stars">★★★★★</span> <b>4.8/5</b> from (14,932+ reviews)</div>
+      <h1 class="ptitle">Natural Batana Hair Oil</h1>
+      <p class="pdesc">Our oil works at the root to speed up growth, strengthen fragile strands, and restore thinning edges and areas of alopecia. Where most oils take months, this formula helps deliver visibly thicker, fuller hair in as little as 3 to 6 weeks.</p>
+      <div class="benefits" id="benefits"><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic01.svg" alt="" width="22" height="22" loading="lazy"></span><span>Regrows Edges</span></div><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic02.svg" alt="" width="22" height="22" loading="lazy"></span><span>Restores Shine</span></div><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic03.svg" alt="" width="22" height="22" loading="lazy"></span><span>Nourishes the Scalp</span></div><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic04.svg" alt="" width="22" height="22" loading="lazy"></span><span>Strengthens Follicles</span></div><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic05.svg" alt="" width="22" height="22" loading="lazy"></span><span>Improves Elasticity</span></div><div class="ben"><span class="bicon"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic06.svg" alt="" width="22" height="22" loading="lazy"></span><span>Prevents Breakage</span></div></div>
+      <div class="offers" id="offers"><div class="offer on" onclick="[].forEach.call(this.parentNode.querySelectorAll('.offer'),function(c){c.classList.remove('on')});this.classList.add('on');"><span class="radio"></span><span class="name">Buy 1 Get 1 Free</span><span class="price"><b>$29.99</b><s>$59.99</s></span></div><div class="offer" onclick="[].forEach.call(this.parentNode.querySelectorAll('.offer'),function(c){c.classList.remove('on')});this.classList.add('on');"><span class="pop">Most Popular</span><span class="radio"></span><span class="name">Buy 2 Get 2 Free</span><span class="price"><b>$59.99</b><s>$119.99</s></span></div><div class="offer" onclick="[].forEach.call(this.parentNode.querySelectorAll('.offer'),function(c){c.classList.remove('on')});this.classList.add('on');"><span class="radio"></span><span class="name">Buy 3 Get 3 Free</span><span class="price"><b>$89.99</b><s>$179.99</s></span></div></div>
+      <div id="subbox" class="subbox"><div class="sub-head" id="subHead" onclick="var b=document.getElementById('subbox');b.classList.toggle('on');var c=document.getElementById('subConsent');if(c)c.hidden=!b.classList.contains('on');var t=document.getElementById('buyBtn');if(t)t.textContent=b.classList.contains('on')?'Subscribe &amp; Save':'Add to Cart';"><span class="sub-cb"><i>✓</i></span><span class="sub-main"><span class="sub-title">Subscribe &amp; save — automatic refill every 30 days<span class="sub-save" id="subSave" hidden="">Save 0%</span></span><span class="sub-price"><b id="subNow">$39.99</b><s id="subWas"></s><em>per refill · billed every 30 days</em></span><span class="sub-sched" id="subSched">First charge today <b>$39.99</b> · next charge <b>30 August 2026</b>, then every 30 days until cancelled.</span></span></div><div class="sub-terms"><ul><li><b>This is a recurring subscription.</b> You are charged today, then automatically every 30 days for the same amount, using the same payment method, until you cancel.</li><li><b>Cancel anytime</b> — no fees, no minimum number of orders. Cancel from <a href="https://camillithomas7-prog.github.io/azure-en-page/manage-subscription.html">Manage Subscription</a> or email <a href="mailto:averaofficial@hotmail.com">averaofficial@hotmail.com</a> at least 24 hours before the next charge.</li><li>We email you a <b>reminder before every charge</b>, showing the amount and the billing date.</li><li>Free shipping on every refill. The price is locked in and can only change with at least 30 days' written notice.</li><li>Charges appear on your bank statement as <b>AVERA</b>.</li></ul><div class="sub-legal">Leave this box unchecked to buy once, with no subscription and no recurring charge. Full <a href="https://camillithomas7-prog.github.io/azure-en-page/subscription-terms.html">Subscription Terms</a>.</div></div></div>
+      <div class="addons" id="addons"><div class="addons-h">Complete your routine · save more</div><div class="addon" onclick="this.classList.toggle('on')"><span class="cb"><i>✓</i></span><img class="th" src="https://camillithomas7-prog.github.io/azure-en-page/assets/up-roller.png" alt="Scalp Roller + Massager Kit" loading="lazy"><span class="ad-t"><b>Scalp Roller + Massager Kit</b><span>Pushes the oil deeper for faster growth</span></span><span class="ad-p"><b class="ad-now">$24.00</b><s>$39.00</s></span></div><div class="addon" onclick="this.classList.toggle('on')"><span class="cb"><i>✓</i></span><img class="th" src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-edgebalm.jpg" alt="Natural Edge Control Balm" loading="lazy"><span class="ad-t"><b>Natural Edge Control Balm</b><span>Shields the fragile edges you are regrowing</span></span><span class="ad-p"><b class="ad-now">$18.00</b><s>$29.00</s></span></div><div class="addon" onclick="this.classList.toggle('on')"><span class="cb"><i>✓</i></span><img class="th" src="https://camillithomas7-prog.github.io/azure-en-page/assets/up-bonnet.png" alt="Satin Bonnet — Less Breakage" loading="lazy"><span class="ad-t"><b>Satin Bonnet — Less Breakage</b><span>Protects your regrowth from nightly breakage</span></span><span class="ad-p"><b class="ad-now">$22.00</b><s>$34.00</s></span></div></div>
+      <div class="ship">⏱ <span>*Today’s orders ship by: <b id="shipDate">1 August</b></span></div>
+      <div class="sub-consent" id="subConsent" hidden="">By adding this to your cart you authorize AVERA to charge <b>$39.99</b> today and <b>$39.99 every 30 days</b> to the same payment method, until you cancel. Cancel anytime, free of charge, from <a href="https://camillithomas7-prog.github.io/azure-en-page/manage-subscription.html">Manage Subscription</a> or at <a href="mailto:averaofficial@hotmail.com">averaofficial@hotmail.com</a>.</div>
+      <button class="buy" onclick="var B=[7,9,11],D=[13,15,17],p=[],x=0;[].forEach.call(document.querySelectorAll('#offers .offer'),function(c,i){if(c.classList.contains('on'))x=i});p.push(B[x]+'.1:1');[].forEach.call(document.querySelectorAll('#addons .addon'),function(c,j){if(c.classList.contains('on'))p.push(D[j]+'.1:1')});location.href='https://funnels.thisisatestsiteonly.com/7a77ac05-fea4-447c-b68f-e8f292d03ddf/checkout?products='+p.join(';');" id="buyBtn">Add to Cart</button>
+      <div class="pays"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/payments.png" alt="Visa, MasterCard, American Express, PayPal, Apple Pay" loading="lazy" width="1443" height="157"></div>
+
+      <details class="acc"><summary>Benefits</summary><div class="body">
+        <p><b>BEST FOR:</b> Thin, weak, or brittle edges. Works on all hair types, including color-treated hair and protective styles.</p>
+        <p><b>FEEL:</b> A lightweight, non-greasy oil that nourishes instantly and leaves hair soft.</p>
+        <p><b>ABSORPTION:</b> Sinks quickly into the scalp and hair with no residue and no heaviness.</p>
+        <p><b>RESULTS:</b> Stronger edges, less breakage, improved areas of alopecia, and visibly healthier growth with regular use.</p>
+        <p><b>FREE FROM:</b> Mineral oils, parabens, sulfates, and silicones. Just pure, natural nourishment.</p>
+        <p><b>MULTI-USE:</b> Perfect for scalp massages, sealing in moisture, or adding shine to braids, twists, and natural curls.</p>
+      </div></details>
+      <details class="acc"><summary>What makes this oil different?</summary><div class="body">
+        <p><b>Built on generations of Honduran tradition.</b> Not every Batana oil is the real thing. The market is full of cheap imitations.</p>
+        <p>Ours is the purest oil in the world — hand-harvested in the Honduran rainforest and made the same way it has been for centuries. Raw, unrefined, and rich in the natural vitamins, omegas, and antioxidants that imitations simply can’t match.</p>
+      </div></details>
+      <details class="acc"><summary>How do I use this oil?</summary><div class="body">
+        <img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-01.webp" alt="How to use" style="border-radius:10px;margin-top:6px">
+      </div></details>
+      <details class="acc"><summary>Ingredients</summary><div class="body">
+        <p><b>100% Pure Batana Oil.</b> One single ingredient, in its purest form, straight from the Honduran rainforest.</p>
+        <p><b>Vitamin E Complex</b> — protects &amp; repairs with antioxidants that seal in deep moisture.</p>
+        <p><b>Omega 3-6-9</b> — nourishes hair while restoring softness, flexibility, and shine.</p>
+        <p><b>Vitamin A Complex</b> — renews &amp; strengthens by boosting cell turnover.</p>
+      </div></details>
+      <details class="acc"><summary>Shipping &amp; Returns</summary><div class="body">
+        <p><b>Processing time:</b> Allow 1 to 2 business days for processing and shipping.</p>
+        <p><b>Delivery time:</b> Estimated delivery within 5 to 7 business days depending on your area.</p>
+        <p><b>30-day guarantee:</b> Try Avera’s 100% pure Batana oil for 30 days. If you’re not satisfied, we’ll refund you in full.</p>
+      </div></details>
+
+      <div class="doc">
+        <img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-doctor.png" alt="Dr. Amara Bennett">
+        <div>
+          <p>“With so many counterfeits on the market, Avera’s oil tested as the purest we’ve seen. Proven results for scalp health, follicle strength, and visibly fuller growth — with clear improvement on thinning edges and areas of alopecia.”</p>
+          <div class="who">Dr. Amara Bennett</div>
+          <div class="role">✓ Hair Restoration Specialist</div>
+        </div>
+      </div>
+    </div>
+  </section>
+</div>
+
+<!-- TRUST BADGES -->
+<section style="background:var(--green);color:#fff;padding:26px 0">
+  <div class="wrap" style="display:flex;justify-content:space-around;flex-wrap:wrap;gap:20px;text-align:center;font-size:12.5px;letter-spacing:.08em;text-transform:uppercase;font-weight:600">
+    <div>100% Pure<br>Batana Oil</div>
+    <div>Dermatologist<br>Tested</div>
+    <div>Cruelty-Free<br>&amp; Vegan</div>
+    <div>No Harsh<br>Chemicals</div>
+  </div>
+</section>
+
+<!-- QUEENS -->
+<section class="sec c2">
+  <div class="wrap">
+    <h2>Thousands of<br>Black queens choose our oil</h2>
+    <p class="sub">In a world full of chemical knock-offs, thousands of queens choose the original Batana oil</p>
+    <div class="cols4" id="cols4"><div class="col4"><div class="qic"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic07.svg" alt="" width="76" height="76" loading="lazy"></div><h3>100% Pure Batana Oil</h3><p>Sourced straight from the American oil palm, with no fillers and no blends.</p></div><div class="col4"><div class="qic"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic08.svg" alt="" width="76" height="76" loading="lazy"></div><h3>Growth Focused</h3><p>Traditionally used to revive thinning edges and bald patches.</p></div><div class="col4"><div class="qic"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic09.svg" alt="" width="76" height="76" loading="lazy"></div><h3>Deep Repair</h3><p>Repairs breakage, dryness, and split ends from root to tip.</p></div><div class="col4"><div class="qic"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/icons/ic10.svg" alt="" width="76" height="76" loading="lazy"></div><h3>Light &amp; Absorbent</h3><p>Deeply nourishes hair and scalp without any grease or residue.</p></div></div>
+    <div class="cta-c">
+      <button class="buy inline" onclick="document.getElementById('offers').scrollIntoView({behavior:'smooth',block:'center'})">Add to Cart</button>
+      <div class="guar">🛡 30 Day Results or Money Back</div>
+    </div>
+  </div>
+</section>
+
+<!-- ONE OIL -->
+<section class="sec oneoil" style="padding-top:0">
+  <div class="collage">
+    <div class="col-l"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-hair-l.jpg" alt="Natural curls"></div>
+    <div class="col-r"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-hair-tr.jpg" alt="Healthy scalp"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-hair-br.jpg" alt="Happy customer"></div>
+  </div>
+  <div class="wrap" style="padding-top:54px">
+    <h2>One Oil. Every Hair<br>Concern, Solved.</h2>
+    <p class="sub">No gimmicks, no blends, no fillers — just pure Batana oil, proven to transform your hair from the root.</p>
+    <div class="oneoil-acc" id="concerns"><details><summary>Thinning Edges &amp; Alopecia</summary><div class="cbody"><ul><li>Reactivates dormant follicles</li><li>Strengthens roots to reduce shedding</li><li>Restores density along edges and bald patches</li><li>Supports roots to stop breakage</li></ul></div></details><details><summary>Shedding &amp; Breakage</summary><div class="cbody"><ul><li>Cuts daily shedding by strengthening roots</li><li>Seals fragile strands to prevent breakage</li><li>Shields hair from stress and damage</li><li>Supports length retention</li></ul></div></details><details><summary>Dryness, Brittle Hair &amp; Split Ends</summary><div class="cbody"><ul><li>Deeply hydrates for lasting softness</li><li>Restores elasticity so hair bends instead of snapping</li><li>Smooths cuticles for shine</li><li>Seals split ends</li></ul></div></details><details><summary>Flaky or Irritated Scalp</summary><div class="cbody"><ul><li>Naturally soothes itching and irritation</li><li>Rebalances oil to reduce flakes</li><li>Strengthens the scalp barrier</li><li>Builds a healthy base for growth</li></ul></div></details><details><summary>Weak, Dull Hair</summary><div class="cbody"><ul><li>Rebuilds strength with nutrient-rich oils</li><li>Restores natural thickness and volume</li><li>Repairs heat and chemical damage</li><li>Revives shine and softness</li></ul></div></details></div>
+    <button class="trybtn" onclick="document.getElementById('offers').scrollIntoView({behavior:'smooth',block:'center'})">Try Avera Today, Risk-Free!</button>
+    <div class="guar" style="justify-content:center">↻ 30-DAY RESULTS OR YOUR MONEY BACK</div>
+  </div>
+</section>
+
+<!-- STATS BAND (gold oil) -->
+<section class="statsband">
+  <div class="wrap">
+    <div class="stats">
+      <div class="stat"><b>200k+</b><span>Customers</span></div>
+      <div class="stat"><b>850,000+</b><span>Bottles Sold</span></div>
+      <div class="stat"><b>58k+</b><span>5-Star Reviews</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- BEFORE / AFTER -->
+<section class="sec">
+  <div class="wrap">
+    <h2>What can 3 to 8 weeks do for your edges?</h2>
+    <p class="sub">Beyond regrowing their edges, women also report remarkable shine, softness, and thickness throughout their hair.</p>
+    <div class="batabs" id="batabs"><div class="batab on" onclick="var w=this.parentNode,t=this;[].forEach.call(w.children,function(c){c.classList.toggle('on',c===t)});var p=document.getElementById('bacontent').children,i=[].indexOf.call(w.children,t);[].forEach.call(p,function(c,k){c.classList.toggle('on',k===i)});">Edge Growth</div><div class="batab" onclick="var w=this.parentNode,t=this;[].forEach.call(w.children,function(c){c.classList.toggle('on',c===t)});var p=document.getElementById('bacontent').children,i=[].indexOf.call(w.children,t);[].forEach.call(p,function(c,k){c.classList.toggle('on',k===i)});">Alopecia</div><div class="batab" onclick="var w=this.parentNode,t=this;[].forEach.call(w.children,function(c){c.classList.toggle('on',c===t)});var p=document.getElementById('bacontent').children,i=[].indexOf.call(w.children,t);[].forEach.call(p,function(c,k){c.classList.toggle('on',k===i)});">Strength &amp; Protection</div><div class="batab" onclick="var w=this.parentNode,t=this;[].forEach.call(w.children,function(c){c.classList.toggle('on',c===t)});var p=document.getElementById('bacontent').children,i=[].indexOf.call(w.children,t);[].forEach.call(p,function(c,k){c.classList.toggle('on',k===i)});">Scalp Health</div></div>
+    <div id="bacontent"><div class="bapanel on"><div class="bapair2"><div class="baimg before"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-06.webp" alt=""><div class="cap">Day 01</div></div><div class="baimg after"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-07.webp" alt=""><div class="cap">Day 36</div></div></div><div class="bameta"><span class="bstars">★★★★★</span><span class="baprob"><b>CONCERN:</b> Bald edges</span></div><div class="bareview"><div class="q">"It actually works — after about a month they’re growing back?! It’s filling in for real."</div><div class="n">Ayanna Brooks · Verified Buyer</div></div></div><div class="bapanel"><div class="bapair2"><div class="baimg before"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-12.jpg" alt=""><div class="cap">Day 14</div></div><div class="baimg after"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-13.jpg" alt=""><div class="cap">Day 60</div></div></div><div class="bameta"><span class="bstars">★★★★★</span><span class="baprob"><b>CONCERN:</b> Alopecia patches</span></div><div class="bareview"><div class="q">"My hair is growing back so fast!!! I’m not keeping this a secret anymore, go get it."</div><div class="n">Latoya P. · Verified Buyer</div></div></div><div class="bapanel"><div class="bapair2"><div class="baimg before"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-10.jpg" alt=""><div class="cap">Day 43</div></div><div class="baimg after"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-11.jpg" alt=""><div class="cap">Day 85</div></div></div><div class="bameta"><span class="bstars">★★★★★</span><span class="baprob"><b>CONCERN:</b> Breakage</span></div><div class="bareview"><div class="q">"No more snapping strands! My length is finally showing and my hair feels so strong."</div><div class="n">Monique J. · Verified Buyer</div></div></div><div class="bapanel"><div class="bapair2"><div class="baimg before"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-08.jpg" alt=""><div class="cap">Day 01</div></div><div class="baimg after"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-09.jpg" alt=""><div class="cap">Day 30</div></div></div><div class="bameta"><span class="bstars">★★★★★</span><span class="baprob"><b>CONCERN:</b> Flaky scalp</span></div><div class="bareview"><div class="q">"My scalp finally calmed down — no more flakes, just healthy, full hair."</div><div class="n">Keisha R. · Verified Buyer</div></div></div></div>
+  </div>
+</section>
+
+<!-- MOST OILS JUST COAT -->
+<section class="coatsec">
+  <div class="ticker"><div class="ticker-track"><span class="ticker-item">New Customer Offer <b>Buy 1, Get 1 Free!</b> Ends today&nbsp;·&nbsp;New Customer Offer <b>Buy 1, Get 1 Free!</b> Ends today&nbsp;·&nbsp;</span><span class="ticker-item" aria-hidden="true">New Customer Offer <b>Buy 1, Get 1 Free!</b> Ends today&nbsp;·&nbsp;New Customer Offer <b>Buy 1, Get 1 Free!</b> Ends today&nbsp;·&nbsp;</span></div></div>
+  <div class="wrap center">
+    <span class="mostpill">Most Oils Just Coat…</span>
+    <h2 class="coathead">Ours <em>Repairs</em><br>From Within</h2>
+    <div class="coatgrid">
+      <div class="coatcol">
+        <img class="strand" src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-14.webp" alt="Cheap oil strand">
+        <span class="cotag">Cheap Oils Damage Your Hair</span>
+        <div class="cobox"><span class="mk x">✕</span><span>Fillers coat and suffocate the hair, leaving it heavy, dull, and brittle.</span></div>
+        <div class="copills"><span>Damaged</span><span>Brittle</span><span>Dull</span></div>
+        <h3>Cheap oils suffocate your hair.</h3>
+        <p>Layers of synthetic fillers coat, clog, and weigh hair down — leaving it brittle, dull, and weaker with every wash.</p>
+      </div>
+      <div class="coatcol">
+        <img class="strand" src="https://camillithomas7-prog.github.io/azure-en-page/assets/sec-15.webp" alt="Batana strand">
+        <span class="cotag">Avera 100% Batana Oil</span>
+        <div class="cobox"><span class="mk v">✓</span><span>Leaves hair light, smooth, and able to breathe — no heavy coating, just natural shine.</span></div>
+        <div class="copills"><span>Strong</span><span>Silky</span><span>Radiant</span></div>
+        <h3>Batana oil transforms from within.</h3>
+        <p>Our nutrient-rich formula sinks deep into the follicle, repairing damage at the source and driving faster, fuller growth in weeks — not months.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SOURCE (numbered accordion) -->
+<section class="sec c2">
+  <div class="wrap">
+    <img class="srcjar" src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-jar.jpg" alt="Avera Batana Oil jar">
+    <h2>Rainforest grown,<br>small batch, purity verified</h2>
+    <div class="numacc" id="numacc"><details open=""><summary><span class="no">1</span><span class="ttl">The Source</span></summary><div class="nbody"><b>Where it all begins.</b>Elaeis oleifera, native to Honduras, grows in mineral-rich rainforest soil. We source directly from Miskito families — no middlemen, full traceability.</div></details><details><summary><span class="no">2</span><span class="ttl">The Making</span></summary><div class="nbody"><b>Pure from the start.</b>The fruit is hand-selected and cold-pressed in small batches (no heat, no solvents), cloth-filtered, and bottled on site. No blending, no fragrance, no fillers.</div></details><details><summary><span class="no">3</span><span class="ttl">Why It Works</span></summary><div class="nbody"><b>Potency that performs.</b>Rich in vitamin E, omegas, and beta-carotene, Batana oil stimulates the scalp, strengthens follicles, and speeds up healthy growth while restoring silky shine.</div></details></div>
+    <button class="trybtn" onclick="document.getElementById('offers').scrollIntoView({behavior:'smooth',block:'center'})">Try Avera Today, Risk-Free!</button>
+    <div class="guar" style="justify-content:center">↻ 30-DAY RESULTS OR YOUR MONEY BACK</div>
+  </div>
+</section>
+
+<!-- BACKED BY TESTING -->
+<section class="sec testing">
+  <div class="wrap" style="max-width:820px">
+    <h2 style="text-align:left">Backed by <em>Testing</em>,<br>Not Just Promises.</h2>
+    <p class="sub" style="text-align:left;margin-left:0">Every batch is tested by independent labs to confirm unmatched purity and potency. Where others make claims, we rely on data — and the results speak for themselves.</p>
+    <div id="testrows"><div class="trow"><div class="tleft"><span class="pct">96%</span></div><div class="tright"><div class="desc"><b>96%</b> saw stronger hair, with less breakage and shedding</div><div class="jarcard"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-jar.jpg" alt="Avera jar"></div></div></div><div class="trow"><div class="tleft"><span class="pct">93%</span></div><div class="tright"><div class="desc"><b>93%</b> reported regrowth on thinning edges and areas of alopecia</div><div class="jarcard"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-jar.jpg" alt="Avera jar"></div></div></div><div class="trow"><div class="tleft"><span class="pct">86%</span></div><div class="tright"><div class="desc"><b>86%</b> noticed visibly thicker, fuller hair</div><div class="jarcard"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-jar.jpg" alt="Avera jar"></div></div></div></div>
+    <p class="trialnote">Results from an independent 2025 user study (n=XX)</p>
+    <button class="trybtn" onclick="document.getElementById('offers').scrollIntoView({behavior:'smooth',block:'center'})">Try Avera Today, Risk-Free!</button>
+  </div>
+</section>
+
+<!-- REAL WOMEN -->
+<section class="sec c2">
+  <div class="wrap">
+    <h2>Made by Black women. For Black women.</h2>
+    <p class="sub">4.9/5 · Rated Excellent by thousands of customers</p>
+    <div style="display:grid;grid-template-columns:repeat(6,1fr);gap:12px" id="women"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w1.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w2.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w3.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w4.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w5.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-w6.jpg" style="width:100%;aspect-ratio:1/1.2;object-fit:cover;border-radius:12px" alt="Happy customer"></div>
+  </div>
+</section>
+
+<!-- GOLD STANDARD COMPARISON -->
+<section class="sec c2 compare">
+  <div class="wrap">
+    <h2>The Gold Standard in Hair Oil</h2>
+    <p class="sub">Real Honduran Batana oil vs cheap imitations.</p>
+    <img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-compare.jpg" alt="Pure vs Fake Batana Oil">
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="sec">
+  <div class="wrap">
+    <h2 style="margin-bottom:40px">FAQ</h2>
+    <div class="faq" id="faq"><details><summary>What makes Batana oil different from other oils?</summary><div class="a">It’s a single, pure ingredient — authentic Batana hand-harvested in Honduras — rich in the natural vitamin E, omega 3-6-9, and vitamin A that cheap blends simply don’t have.</div></details><details><summary>Does it really help with thinning edges?</summary><div class="a">Yes. Batana oil has been used for centuries to restore edges and even areas of alopecia. It stimulates follicles, improves circulation, and helps fill in thinning spots with regular use.</div></details><details><summary>How do I use it?</summary><div class="a">Massage a small amount into your scalp and edges 3 to 4 times a week. Leave it on overnight, or at least 20 minutes before rinsing. It also works as a daily styling oil.</div></details><details><summary>Is it right for every hair type?</summary><div class="a">Absolutely. It works on natural, relaxed, and color-treated hair, and on protective styles. It’s gentle, nutrient-rich, and free of parabens, silicones, and sulfates.</div></details><details><summary>Will it make my hair greasy?</summary><div class="a">No — our oil absorbs quickly and leaves no heavy residue. It nourishes deeply while keeping hair soft.</div></details><details><summary>How soon will I see results?</summary><div class="a">Most women notice softer, shinier hair within 1 to 2 weeks. Edges and thinning areas often show visible regrowth between 3 and 8 weeks.</div></details><details><summary>Can I use it on my skin too?</summary><div class="a">Yes! Batana oil is safe for skin: it hydrates dry areas, improves elasticity, and protects against oxidative stress.</div></details></div>
+  </div>
+</section>
+
+<!-- FINAL CTA -->
+<section class="sec g">
+  <div class="wrap center">
+    <h2 style="color:#fff">Try Avera today, risk-free!</h2>
+    <p class="sub">30 days to fall in love with your hair — or your money back.</p>
+    <button class="buy inline" onclick="document.getElementById('offers').scrollIntoView({behavior:'smooth',block:'center'})">Add to Cart</button>
+    <div class="guar" style="color:#bcd0c2;margin-top:16px">🛡 30 Day Results or Money Back</div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div class="fgrid">
+      <div>
+        <div class="logo"><img src="https://camillithomas7-prog.github.io/azure-en-page/assets/avera-logo-blanc.png" alt="AVERA"></div>
+        <p style="max-width:320px">100% Pure Batana Oil — hand-harvested in the Honduran rainforest. Made by Black women, for Black women.</p>
+        <p style="margin-top:12px">Email: averaofficial@hotmail.com</p>
+      </div>
+      <div>
+        <h5>Quick Links</h5>
+        <ul><li><a href="#">Member Area</a></li><li><a href="#">Become an Ambassador</a></li><li><a href="#">Privacy Policy</a></li><li><a href="#">Terms &amp; Conditions</a></li></ul>
+      </div>
+      <div>
+        <h5>Subscribe to our emails</h5>
+        <p>Sign up for exclusive offers and discounts.</p>
+        <div class="fmail"><input type="email" placeholder="E-mail"><button>Sign Up</button></div>
+      </div>
+    </div>
+    <div class="fbot">© 2026, AVERA · Refunds · Privacy · Terms · Shipping</div>
+  </div>
+</footer>
+
+
+
+
+
+
+
+</body></html>
